@@ -13,7 +13,8 @@ import java.util.List;
 public class RestaurantRatingController {
 
     @GetMapping("restaurant/rating/{userId}")
-    public RatingInfo getRatingInfo(@PathVariable String userId) {
+    public RatingInfo getRatingInfo(@PathVariable String userId) throws InterruptedException {
+        Thread.sleep(3000);
         List<Rating> movieRatings = new ArrayList<Rating>();
         movieRatings.add(new Rating("123", 3));
         movieRatings.add(new Rating("456", 2));
