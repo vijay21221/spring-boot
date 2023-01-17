@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: centralized-config-server
+  profiles:
+    active: local,dev,prod
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vijay21221/spring-boot-centralized-config
+          search-paths: /configfiles
+server:
+  port: 8888
+
+management:
+  security:
+    enabled: false
